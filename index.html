@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="./main.css">
+        </head>
+    <body>  
+        <div class="ny-collision-dashboard">
+            <h1>NYC Collisions</h1>
+            <div class="load-text">Loading...</div>
+            <div class="filter-wrap hide">
+              <label for="yearSelect">Years:</label>
+              <select id="yearSelect"></select>
+            </div>
+            <div class="charts-wrap hide">
+              <div class="chart" id="large-text"></div>
+              <div class="chart" id="map"></div>
+            </div>
+          </div>
+          <script src="./bundle.js"></script>
+    </body>
+</html>
