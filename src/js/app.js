@@ -5,14 +5,12 @@ import { drawMap } from './choropleth';
 import "../scss/style.scss";
 
 const fetchData = async (width, height) => {
-  const apiUrl = process.env.NODE_ENV === 'production' 
-  ? 'https://web.ics.purdue.edu/' 
-  : '/api/';
+  const apiUrl = 'https://web.ics.purdue.edu/' 
     try {
         const data = await fetch(`${apiUrl}~zong6/fetch-data.php`)
         .then(response => response.json())
         .catch(error => console.error('Error fetching data:', error));
-      const geoData = await json(`${apiUrl}~zong6/MODZCTA_20240916.geojson`);
+      const geoData = await json(`${apiUrl}~zong6/serve-jsondata.php`);
 
       if(data){
         select('.load-text').attr('class', "hide")
